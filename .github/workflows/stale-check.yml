@@ -1,0 +1,68 @@
+name: Flag Stale Entries
+
+on:
+  schedule:
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+
+jobs:
+  stale-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check for stale entries
+        run: |
+          python3 -c "
+          import json
+          from datetime import datetime, timedelta
+
+          with open('data/entries.json') as f:
+              data = json.load(f)
+
+          cutoff = datetime.now() - timedelta(days=365)
+          stale = []
+
+          for entry in data:
+              lv = entry.get('last_verified', '')
+              if lv:
+                  try:
+                      date = datetime.strptime(lv, '%Y-%m-%d')
+                      if date < cutoff:
+                          stale.append(entry['name'])
+                  except ValueError:
+                      stale.append(f\"{entry['name']} (invalid date: {lv})\")
+
+          if stale:
+              print(f'Found {len(stale)} stale entries (not verified in >12 months):')
+              for name in stale:
+                  print(f'  - {name}')
+              print()
+              print('Please update last_verified dates or remove inactive entries.')
+              exit(1)
+          else:
+              print(f'All {len(data)} entries are up to date.')
+          "
+
+      - name: Create issue for stale entries
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { execSync } = require('child_process');
+            const output = execSync(
+              'python3 -c "import json; from datetime import datetime, timedelta; data=json.load(open(\'data/entries.json\')); cutoff=datetime.now()-timedelta(days=365); stale=[e[\'name\'] for e in data if e.get(\'last_verified\') and datetime.strptime(e[\'last_verified\'],\'%Y-%m-%d\')<cutoff]; print(\'\\n\'.join(stale))"'
+            ).toString().trim();
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Stale entries detected - ${output.split('\n').length} entries need verification`,
+              body: `The following entries have not been verified in over 12 months:\n\n\`\`\`\n${output}\n\`\`\`\n\nPlease review and update the \`last_verified\` dates, or remove entries that are no longer active.`,
+              labels: ['maintenance', 'stale-entries']
+            });
