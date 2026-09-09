@@ -10,7 +10,6 @@ CATEGORIES_ORDER = [
     "Intelligence Feeds & Data Providers",
     "OSINT & Collection Tools",
     "Frameworks & Standards",
-    "Threat Intelligence AI",
 ]
 
 CATEGORY_DEFINITIONS = {
@@ -29,11 +28,6 @@ CATEGORY_DEFINITIONS = {
     "Frameworks & Standards": (
         "Models and protocols used to structure or exchange intelligence "
         "(MITRE ATT&CK, STIX, TAXII, etc.)."
-    ),
-    "Threat Intelligence AI": (
-        "AI/ML-powered tools and platforms purpose-built for threat intelligence collection, analysis, "
-        "correlation, or generation. Includes LLM-based TI assistants, automated report summarizers, "
-        "and predictive threat modeling systems."
     ),
 }
 
@@ -169,7 +163,6 @@ def generate_readme(data):
     lines.append("- **Looking for open-source TIPs?** See [Threat Intelligence Platforms](#threat-intelligence-platforms) and filter by `Open Source` license")
     lines.append("- **Looking for free threat feeds?** See [Intelligence Feeds & Data Providers](#intelligence-feeds--data-providers) and filter by `Free` access")
     lines.append("- **Looking for EU-based vendors?** Look for the ![EU](https://img.shields.io/badge/Region-EU-blueviolet) badge")
-    lines.append("- **Looking for AI-powered TI tools?** See [Threat Intelligence AI](#threat-intelligence-ai)")
     lines.append("")
 
     lines.append("### Taxonomy")

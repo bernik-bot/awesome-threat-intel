@@ -60,7 +60,6 @@ All new entries must be added to `data/entries.json` with the following required
 2. **Intelligence Feeds & Data Providers** - Sources that provide raw or processed intelligence data
 3. **OSINT & Collection Tools** - Tools that collect intelligence from public sources
 4. **Frameworks & Standards** - Models and protocols for structuring/exchanging intelligence
-5. **Threat Intelligence AI** - AI/ML-powered tools purpose-built for TI collection, analysis, or generation
 
 ### Rules
 

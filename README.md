@@ -2,8 +2,8 @@
 
 > A curated list of awesome threat intelligence resources, tools, feeds, and platforms.
 >
-> **Last updated:** 2026-05-13
-> **Total entries:** 84
+> **Last updated:** 2026-09-10
+> **Total entries:** 67
 
 ## About This List
 
@@ -24,7 +24,6 @@ enabling filtering by license, region, deployment model, data type, and more.
 - **Looking for open-source TIPs?** See [Threat Intelligence Platforms](#threat-intelligence-platforms) and filter by `Open Source` license
 - **Looking for free threat feeds?** See [Intelligence Feeds & Data Providers](#intelligence-feeds--data-providers) and filter by `Free` access
 - **Looking for EU-based vendors?** Look for the ![EU](https://img.shields.io/badge/Region-EU-blueviolet) badge
-- **Looking for AI-powered TI tools?** See [Threat Intelligence AI](#threat-intelligence-ai)
 
 ### Taxonomy
 
@@ -34,7 +33,6 @@ enabling filtering by license, region, deployment model, data type, and more.
 | [Intelligence Feeds & Data Providers](#intelligence-feeds-data-providers) | Sources that provide raw or processed intelligence data (IOCs, TTPs, reports, reputation data). If it primarily provides data, it belongs here. |
 | [OSINT & Collection Tools](#osint-collection-tools) | Tools used to collect intelligence from public or semi-public sources. If it gathers data but does not provide curated intel, it belongs here. |
 | [Frameworks & Standards](#frameworks-standards) | Models and protocols used to structure or exchange intelligence (MITRE ATT&CK, STIX, TAXII, etc.). |
-| [Threat Intelligence AI](#threat-intelligence-ai) | AI/ML-powered tools and platforms purpose-built for threat intelligence collection, analysis, correlation, or generation. Includes LLM-based TI assistants, automated report summarizers, and predictive threat modeling systems. |
 
 ---
 
@@ -145,32 +143,6 @@ enabling filtering by license, region, deployment model, data type, and more.
 | [STIX](https://oasis-open.github.io/cti-documentation/) | Structured Threat Information Expression standard for representing and sharing cyber threat intelligence in machine-readable format. | Open Source | US | Free |
 | [TAXII](https://oasis-open.github.io/cti-documentation/) | Trusted Automated Exchange of Intelligence Information protocol for transporting STIX data between services over HTTPS. | Open Source | US | Free |
 | [TLP](https://www.first.org/tlp/) | Traffic Light Protocol for indicating how far intelligence can be shared across organizational boundaries. | Open Source | US | Free |
-
----
-
-## Threat Intelligence AI
-
-*AI/ML-powered tools and platforms purpose-built for threat intelligence collection, analysis, correlation, or generation. Includes LLM-based TI assistants, automated report summarizers, and predictive threat modeling systems.*
-
-| Name | Description | License | Region | Access |
-|------|-------------|---------|--------|--------|
-| [Anomali AI](https://www.anomali.com/) | AI-enhanced threat intelligence platform using machine learning for indicator scoring, correlation, and automated threat hunting. | Commercial | US | Paid |
-| [CrowdStrike Charlotte AI](https://www.crowdstrike.com/) | Generative AI security assistant built on the Falcon platform, providing threat hunting, incident analysis, and intelligence summarization. | Commercial | US | Paid |
-| [Darktrace AI](https://www.darktrace.com/) | Autonomous AI platform using unsupervised machine learning and generative AI for threat detection, response, and intelligence generation. | Commercial | EU | Paid |
-| [Flashpoint AI](https://flashpoint.io/) | AI-driven intelligence platform for threat analysis, leveraging machine learning for automated collection, classification, and risk scoring of threat data. | Commercial | US | Paid |
-| [Google Cloud Security AI](https://cloud.google.com/security) | AI-driven security analytics platform leveraging Google's threat intelligence data and machine learning for detection and investigation. | Commercial | US | Paid |
-| [GreyNoise AI](https://www.greynoise.io/) | AI-powered internet scanning and noise filtering platform, providing context-rich threat intelligence by separating background noise from targeted attacks. | Freemium | US | Freemium |
-| [IBM Security watsonx for Security](https://www.ibm.com/products/watsonx-for-security) | AI assistant for security operations using IBM's watsonx foundation models to accelerate threat investigation and intelligence analysis. | Commercial | US | Paid |
-| [LogRhythm Copilot AI](https://logrhythm.com/) | AI-powered security assistant for threat investigation, providing automated intelligence gathering and natural language query capabilities. | Commercial | US | Paid |
-| [Mandiant AI (Google Cloud)](https://www.mandiant.com/) | AI capabilities integrated into Mandiant's threat intelligence offerings, providing automated analysis and predictive threat modeling. | Commercial | US | Paid |
-| [Microsoft Security Copilot](https://www.microsoft.com/security/business/ai-for-security-copilot) | AI-powered security assistant integrating threat intelligence from Microsoft's ecosystem, providing incident analysis and threat landscape insights. | Commercial | US | Paid |
-| [Palo Alto Networks Cortex XSIAM AI](https://www.paloaltonetworks.com/cortex) | AI-driven security operations platform with built-in threat intelligence capabilities, automated analysis, and generative AI assistant. | Commercial | US | Paid |
-| [Recorded Future Fusion AI](https://www.recordedfuture.com/) | AI-powered threat intelligence platform using natural language processing to extract, correlate, and score indicators from millions of sources. | Commercial | US | Paid |
-| [SentinelOne Purple AI](https://www.sentinelone.com/) | AI-powered threat hunting and analysis assistant built on top of SentinelOne's Singularity platform with generative AI capabilities. | Commercial | US | Paid |
-| [Splunk AI Assistant](https://www.splunk.com/) | Generative AI feature in Splunk for security use cases, providing natural language threat hunting and intelligence summarization. | Commercial | US | Paid |
-| [Threat Landscape Copilot](https://threatlandscape.ai/) | Conversational AI assistant for threat intelligence providing structured, role-aware responses grounded in live STIX 2.1 data across actors, TTPs, IOCs, and campaigns. | Freemium | EU | Paid |
-| [ThreatConnect Caliber AI](https://threatconnect.com/) | AI-powered threat operations platform with automated intelligence prioritization, risk scoring, and generative AI for report generation. | Commercial | US | Paid |
-| [ZeroFox AI Platform](https://www.zerofox.com/) | AI-driven external threat intelligence platform monitoring dark web, social media, and digital assets for brand and cyber threats. | Commercial | US | Paid |
 
 ---
 

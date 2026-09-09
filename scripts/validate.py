@@ -11,7 +11,6 @@ VALID_CATEGORIES = [
     "Intelligence Feeds & Data Providers",
     "OSINT & Collection Tools",
     "Frameworks & Standards",
-    "Threat Intelligence AI",
 ]
 
 VALID_LICENSES = ["Open Source", "Commercial", "Freemium", "N/A"]
